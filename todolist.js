@@ -32,10 +32,15 @@ const jobListElement = document.querySelector("#job-list");
 
 // 1. Dùng map() để render dữ liệu
 const newJobList = jobs.map(function (job) {
+  // Render dữ liệu có điều kiện
   return `
      <div>
         <input type="checkbox" />
-        <s>${job.name}</s>
+        ${
+          job.isCompleted === true
+            ? `<s>${job.name}</s>`
+            : `<span>${job.name}</span>`
+        }
         <button>Sửa</button>
         <button>Xóa</button>
       </div>
