@@ -7,10 +7,15 @@
   </head>
   <body>
     <h3>Danh sách công việc</h3>
-    <div>
-      <input placeholder="Nhập tên công việc" type="text" />
-      <button>Thêm</button>
-    </div>
+    <form id="form">
+      <div>
+        <input id="job-name" placeholder="Nhập tên công việc" type="text" />
+        <button>Thêm</button>
+      </div>
+      <p id="error" style="font-size: 12px; color: red; display: none">
+        Tên công việc không được để trống.
+      </p>
+    </form>
 
     <hr />
 
